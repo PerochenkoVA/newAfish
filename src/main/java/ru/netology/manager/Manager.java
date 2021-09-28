@@ -12,7 +12,9 @@ public class Manager {
     public Manager(int lim) {
         if (lim < limit) {
             this.limit = lim;
-        } else this.limit = 10;
+        } else {
+            this.limit = limit;
+        }
     }
 
     public void add(Catalog movie) {
@@ -26,7 +28,7 @@ public class Manager {
 
     public Catalog[] getAll() {
         Catalog[] result = new Catalog[movies.length];
-            for (int i = 0; i < result.length; i++) {
+        for (int i = 0; i < result.length; i++) {
             int index = movies.length - i - 1;
             result[i] = movies[index];
         }
