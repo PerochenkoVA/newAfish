@@ -30,7 +30,7 @@ public class ManagerTest {
     @Test
     void ShouldShowCatalogMovieAboveLim() {
 
-
+        int idToRemove=1;
         Catalog first = new Catalog(1, 1, "Бладшот", 1, 1);
         Catalog second = new Catalog(2, 2, "Вперед", 1, 1);
         Catalog third = new Catalog(3, 3, "Отель Белград", 1, 1);
@@ -55,11 +55,11 @@ public class ManagerTest {
         manager.add(ten);
         manager.add(eleven);
 
-        manager.getLast();
+        manager.removeById(idToRemove);
 
         Catalog[] actual = manager.getLast();
-        Catalog[] expected = new Catalog[]{ten, nine, eight, seven, six, five, four,
-                third, second, first};
+        Catalog[] expected = new Catalog[]{eleven,ten, nine, eight, seven, six, five, four,
+                third, second};
 
         assertArrayEquals(expected, actual);
     }

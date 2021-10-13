@@ -8,7 +8,7 @@ public class Manager {
 
     public Manager() {
     }
-
+/*
     public Manager(int lim) {
         if (lim < limit) {
             this.limit = lim;
@@ -16,7 +16,7 @@ public class Manager {
             this.limit = limit;
         }
     }
-
+*/
     public void add(Catalog movie) {
         int length = movies.length + 1;
         Catalog[] tmp = new Catalog[length];
